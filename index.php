@@ -18,6 +18,9 @@ require_once './include/head.php';
                 echo renderHeader($title, 1);
             ?>
         </div>
+        <?php
+        require_once './include/footer.php'
+        ?>
     </div>
 </body>
 </html>
