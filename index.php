@@ -1,26 +1,15 @@
 <?php
-    $title = 'Strona główna';
-    $activePage = 'home';
-    require_once './include/functions.php';
+require_once 'includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="pl">
-<?php
-require_once './include/head.php';
-?>
-<body>
-    <div>
+<main>
+    <h1>Dostępne Obiekty</h1>
+    <ul>
         <?php
-            require_once './include/nav.php'
-        ?>
-        <div>
-            <?php
-                echo renderHeader($title, 1);
-            ?>
-        </div>
-        <?php
-        require_once './include/footer.php'
-        ?>
-    </div>
-</body>
-</html>
+        $query = "SELECT id, name, description FROM facilities";
+        $result = mysqli_query($link, $query);
+        while ($row = mysqli_fetch_assoc($result)): ?>
+            <li><a href="facility.php?id=<?php echo $row['id']; ?>"><?php echo htmlspecialchars($row['name']); ?></a></li>
+        <?php endwhile; ?>
+    </ul>
+</main>
+<?php require_once 'includes/footer.php'; ?>
