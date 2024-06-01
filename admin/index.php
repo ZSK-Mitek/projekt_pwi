@@ -1,7 +1,7 @@
 <?php
 require_once '../includes/header.php';
 
-if (!isAdmin()) {
+if (!isAdmin($link)) {
     header("Location: ../index.php");
     exit;
 }
@@ -9,7 +9,12 @@ if (!isAdmin()) {
 <h1>Admin Panel</h1>
 <ul>
     <?php $query = "SELECT * FROM facilities"; ?>
-    <li><a href="add_facility.php">Add Facility</a></li>
-    <li><a href="add_sector.php">Add Sector</a></li>
+    <form action="add_facility.php" method="go" >
+        <button type="no_hej">Dodaj Obiekt</button>
+    </form>
+
+    <form action="add_sector.php" method="go" >
+        <button type="no_hej">Dodaj Sektor</button>
+    </form>
 </ul>
 <?php require_once '../includes/footer.php'; ?>

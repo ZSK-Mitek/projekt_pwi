@@ -1,7 +1,7 @@
 <?php
 require_once '../includes/header.php';
 
-if (!isAdmin()) {
+if (!isAdmin($link)) {
     header("Location: ../index.php");
     exit;
 }

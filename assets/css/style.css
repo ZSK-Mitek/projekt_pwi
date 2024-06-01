@@ -16,24 +16,78 @@ body {
 
 main {
     flex: 1;
-    padding-bottom: 60px; /* Wysokość stopki */
+    padding-bottom: 60px;
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
 }
 
-nav a {
-    color: #fff;
-    margin: 0 15px;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+}
+
+.nav-left {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.nav-center {
+    flex: 2;
+    justify-content: center;
+}
+
+.nav-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-container a {
     text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.nav-container a:hover {
+    background-color: #555;
+}
+
+.search-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.search-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #555;
 }
 
 div {
-    margin-bottom: 100px;
+    margin-bottom: 5px;
 }
 
 form {
@@ -50,7 +104,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select {
-    width: 100%;
+    width: 93%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -79,20 +133,96 @@ footer {
 }
 
 .content {
-    margin-bottom: 50px; /* Ustaw margines dolny, aby zapewnić miejsce dla stopki */
+    margin-bottom: 50px;
 }
 
-.review-form-container {
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 20px; /* Dostosuj margines do swoich preferencji */
-    margin-bottom: 50px; 
+.review-form-container, .reservation-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
-.reservation-form-container {
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
 
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 20px; /* Dostosuj margines do swoich preferencji */
-    margin-bottom: 50px; 
+#start_time, #end_time, #date {
+    margin-bottom: 3%;
+}
+
+#tabela_login {
+    margin-top: 7%;
+}
+
+.facilities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.facility {
+    width: calc(25% - 10px);
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.facility img {
+    max-width: 100%;
+    height: auto;
+}
+
+.facility h2 {
+    margin-top: 0;
+}
+
+.facility p {
+    margin-bottom: 10px;
+}
+
+.facility a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.facility a:hover {
+    text-decoration: underline;
+}
+
+.delete-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e60000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
 }
